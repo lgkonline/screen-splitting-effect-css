@@ -1,0 +1,33 @@
+.separator {
+    background-color: black;
+    height: auto;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    display: block;
+    background: hsl(0 0% var(--l-95));
+    width: 100%;
+    height: 1rem;
+    border-radius: 1rem;
+}
+
+.separator::before {
+    margin-bottom: 0.25rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    /* 
+    Browsers sometimes render a weird gap  
+    between the element before and .separator.
+    This box-shadow should avoid this:
+    */
+    box-shadow: 0 -3px 0 hsl(0 0% var(--l-95));
+}
+
+.separator::after {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 3px 0 hsl(0 0% var(--l-95));
+}

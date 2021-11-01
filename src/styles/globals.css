@@ -1,0 +1,94 @@
+:root {
+    font-size: 21px;
+
+    --primary-hs: 350 91%;
+    --secondary-hs: 190 40%;
+
+    --l-0: 0%;
+    --l-30: 30%;
+    --l-40: 40%;
+    --l-50: 50%;
+    --l-80: 80%;
+    --l-90: 90%;
+    --l-95: 95%;
+    --l-100: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --l-0: 100%;
+        --l-30: 70%;
+        --l-40: 60%;
+        --l-80: 20%;
+        --l-90: 10%;
+        --l-95: 5%;
+        --l-100: 0%;
+    }
+}
+
+.light {
+    --l-0: 0%;
+    --l-30: 30%;
+    --l-40: 40%;
+    --l-50: 50%;
+    --l-80: 80%;
+    --l-90: 90%;
+    --l-95: 95%;
+    --l-100: 100%;
+}
+
+.dark {
+    --l-0: 100%;
+    --l-30: 70%;
+    --l-40: 60%;
+    --l-80: 20%;
+    --l-90: 10%;
+    --l-95: 5%;
+    --l-100: 0%;
+}
+
+body {
+    font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, Segoe UI,
+        Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    background: hsl(0 0% var(--l-95));
+    color: hsl(0 0% var(--l-0));
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+svg {
+    font-size: 0.8em;
+}
+
+.container {
+    padding: 0 calc(50% - 14rem);
+    margin: 0 1rem;
+}
+
+.appear {
+    animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+}
+
+.btn {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
